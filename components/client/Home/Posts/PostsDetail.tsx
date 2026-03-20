@@ -5,7 +5,7 @@ import { useData } from "@context/DataProviders";
 import React, { useEffect } from "react";
 import { AiOutlineClockCircle, AiOutlineUser } from "react-icons/ai";
 import NewsCategory from "./NewsCategory";
-import { convertDate } from "@components/items/admin/Handle";
+// import { convertDate } from "@components/items/admin/Handle";
 import Image from "next/image";
 
 const PostsDetail = ({ Data }: any) => {
@@ -18,7 +18,7 @@ const PostsDetail = ({ Data }: any) => {
       setSimilarProduct(sort);
     }
   }, [Data]);
-  const Date = convertDate(Data?.createdAt);
+  // const Date = convertDate(Data?.createdAt);
   const markup = { __html: Data?.content };
   return (
     <div className="p:w-auto d:w-[1300px] p:mx-2 d:mx-auto grid p:grid-cols-1 d:grid-cols-7 font-LexendDeca font-extralight gap-10">
@@ -40,7 +40,7 @@ const PostsDetail = ({ Data }: any) => {
             </div>
             <div className="flex items-center gap-1 text-gray-400 pr-5 border-r">
               <AiOutlineClockCircle />
-              <p className="">{Date}</p>
+              {/* <p className="">{Date}</p> */}
             </div>
             <div className="flex items-center gap-1 text-gray-400">
               <AiOutlineUser />

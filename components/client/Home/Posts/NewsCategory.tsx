@@ -1,6 +1,5 @@
 "use client";
 
-import { convertDate } from "@components/items/admin/Handle";
 import Link from "next/link";
 import React from "react";
 
@@ -8,7 +7,7 @@ const NewsCategory = ({ Data }: any) => {
   return (
     <div className="flex flex-col gap-2 text-[15px] mt-2">
       {Data.slice(0, 8).map((item: any, idx: number) => {
-        const Date = convertDate(item?.createdAt);
+        // const Date = convertDate(item?.createdAt);
         return (
           <Link
             href={`/chi-tiet-bai-viet/${item.url}`}
@@ -27,7 +26,7 @@ const NewsCategory = ({ Data }: any) => {
                 <h2 className="font-light text-[15px] hover:underline">
                   {item.title}
                 </h2>
-                <p className="text[14px] text-gray-400">{Date}</p>
+                {/* <p className="text[14px] text-gray-400">{Date}</p> */}
               </div>
             </div>
           </Link>

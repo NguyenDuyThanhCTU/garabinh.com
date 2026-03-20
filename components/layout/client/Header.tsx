@@ -9,7 +9,6 @@ import { MdOutlineLocalPhone } from "react-icons/md";
 import { RxCross2 } from "react-icons/rx";
 import SideBar from "./SideBar";
 import { useData } from "@context/DataProviders";
-import ContactForm from "@components/client/Home/Items/ContactForm";
 import Image from "next/image";
 import { IoIosMenu } from "react-icons/io";
 import { HeaderItems } from "@assets/item";
@@ -89,7 +88,7 @@ const Header = () => {
           </div>
         </div>
         <>
-          <Modal
+          {/* <Modal
             title="Nhận báo giá"
             open={isOpen}
             destroyOnClose
@@ -98,7 +97,7 @@ const Header = () => {
             onCancel={() => setIsOpen(false)}
           >
             <ContactForm setIsOpen={setIsOpen} />
-          </Modal>
+          </Modal> */}
         </>
       </div>
 

@@ -2,15 +2,11 @@
 import { Modal } from "antd";
 import Image from "next/image";
 import React, { useState } from "react";
-import ContactForm from "./Items/ContactForm";
+
 import { useStateProvider } from "@context/StateProvider";
 import { A11y, Navigation, Pagination, Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/pagination";
-import { Swiper, SwiperSlide } from "swiper/react";
-
-import Link from "next/link";
-import { SwiperNavButtons } from "@components/items/client/SwiperNavButtons";
 
 const TopSection = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -55,7 +51,7 @@ const TopSection = () => {
         />
       </div>
 
-      <>
+      {/* <>
         <Modal
           title="Nhận báo giá"
           open={isOpen}
@@ -66,7 +62,7 @@ const TopSection = () => {
         >
           <ContactForm setIsOpen={setIsOpen} />
         </Modal>
-      </>
+      </> */}
     </div>
   );
 };
