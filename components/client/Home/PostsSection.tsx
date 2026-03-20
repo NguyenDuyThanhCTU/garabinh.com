@@ -23,7 +23,7 @@ const PostsSection = ({ Category, FirstItems }: any) => {
   const HandleChange = (select: number, type: string) => {
     const PostsDisplay = Posts?.filter(
       (item: any) =>
-        item.level1 === slugify(type, { lower: true, locale: "vi" })
+        item.level1 === slugify(type, { lower: true, locale: "vi" }),
     );
     setIsLoading(1000);
     setData(PostsDisplay);
@@ -62,7 +62,7 @@ const PostsSection = ({ Category, FirstItems }: any) => {
               className="hover:bg-gray-100 cursor-pointer shadow-xl duration-300"
             >
               <div className="w-full h-[295px]">
-                <Image
+                <img
                   src={item.image}
                   alt={`posts ${index}`}
                   width={500}

@@ -1,11 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Fugaz+One&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100;200;300;400;500;600&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fugaz+One&family=Inter:wght@100;200;300;400;500;600;700;800;900&display=swap");
 
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
-@import 'animate.css';
-
 
 /*<---------------------------------------------------------- Animation ----------------------------------------------------------> */
 .call-animation {
@@ -83,8 +81,6 @@
   }
 }
 
-
-
 .zalo-animation::before {
   content: "";
   position: absolute;
@@ -106,30 +102,26 @@
   animation-delay: 0.3s;
 }
 
-
 .zoom-animation {
- 
-  border-radius: 8px; 
-  animation: zoom 2s ease-in-out infinite; 
+  border-radius: 8px;
+  animation: zoom 2s ease-in-out infinite;
 }
 
 @keyframes zoom {
-  0%, 100% {
-    transform: scale(1); 
+  0%,
+  100% {
+    transform: scale(1);
   }
   50% {
     transform: scale(1.2);
   }
 }
 
-
 .admin-label {
-font-size: 17px;
-font-weight: 300;
-font-family: lexend deca;
+  font-size: 17px;
+  font-weight: 300;
+  font-family: lexend deca;
 }
-
-
 
 /*<---------------------------------------------------------- Truncate ----------------------------------------------------------> */
 .truncate1 {
@@ -153,11 +145,7 @@ font-family: lexend deca;
   -webkit-line-clamp: 3;
   overflow: hidden;
   text-overflow: ellipsis;
-
-
-  
 }
-
 
 .swiper {
   width: 100%;
@@ -187,10 +175,3 @@ font-family: lexend deca;
   max-width: 100px;
   max-height: 100px;
 }
-
-
-
-
-
-
-

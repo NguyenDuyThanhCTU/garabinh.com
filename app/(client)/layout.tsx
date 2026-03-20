@@ -1,10 +1,5 @@
 import Copyright from "@components/layout/client/Copyright";
-import Footer from "@components/layout/client/Footer";
 import Header from "@components/layout/client/Header";
-import Hotline from "@components/layout/client/Hotline";
-import OnTop from "@components/layout/client/OnTop";
-import SideBar from "@components/layout/client/SideBar";
-import { find } from "@lib/api";
 import React from "react";
 
 type ClientLayoutProps = {
@@ -26,15 +21,7 @@ const ClientLayout: React.FC<ClientLayoutProps> = ({ children }) => {
       </div>
       <div style={containerStyle} className="z-40">
         <div className="mt-[64px]">{children}</div>
-
-        {/* <SideBar /> */}
       </div>
-
-      {/* <div className="relative z-50">
-        <OnTop />
-        <Hotline />
-      </div> */}
-      {/* <Footer /> */}
 
       <Copyright />
     </div>

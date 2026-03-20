@@ -4,7 +4,6 @@ import Content from "./Items/Content";
 import { Drawer, Modal, Rate } from "antd";
 import { useData } from "@context/DataProviders";
 import { useStateProvider } from "@context/StateProvider";
-import FeedBackForm from "./Items/FeedBackForm";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/pagination";
@@ -12,10 +11,51 @@ import "swiper/css/pagination";
 import { Autoplay, Pagination, FreeMode } from "swiper/modules";
 import Image from "next/image";
 
-const FeedBackSection = ({ Data }: any) => {
+const FeedBackSection = () => {
   const [isOpenModel, setIsOpenModel] = useState(false);
   const { HandleNavigate, setFormData } = useStateProvider();
-
+  const Data = [
+    {
+      name: "Nguyễn Văn Tâm",
+      image: "https://randomuser.me/api/portraits/men/1.jpg",
+      date: "15/03/2024",
+      star: "5",
+      feedback:
+        "Dịch vụ tại Garage rất chuyên nghiệp, nhân viên nhiệt tình và tay nghề cao. Tôi rất hài lòng với chiếc xe sau khi bảo dưỡng.",
+    },
+    {
+      name: "Trần Thị Hoa",
+      image: "https://randomuser.me/api/portraits/women/2.jpg",
+      date: "10/03/2024",
+      star: "4.5",
+      feedback:
+        "Giá cả hợp lý, thời gian xử lý nhanh chóng. Không gian chờ sạch sẽ, thoáng mát. Sẽ quay lại ủng hộ lần sau.",
+    },
+    {
+      name: "Lê Hoàng Nam",
+      image: "", // Để trống để test ảnh mặc định của bạn
+      date: "05/03/2024",
+      star: "5",
+      feedback:
+        "Cảm ơn garage đã cứu hộ kịp thời cho xe của tôi giữa đêm. Đội ngũ kỹ thuật hỗ trợ rất tận tâm.",
+    },
+    {
+      name: "Phạm Minh Tuấn",
+      image: "https://randomuser.me/api/portraits/men/4.jpg",
+      date: "28/02/2024",
+      star: "4",
+      feedback:
+        "Linh kiện thay thế chính hãng, có bảo hành đầy đủ nên tôi rất yên tâm khi giao xe ở đây.",
+    },
+    {
+      name: "Hoàng Thanh Thảo",
+      image: "https://randomuser.me/api/portraits/women/5.jpg",
+      date: "20/02/2024",
+      star: "5",
+      feedback:
+        "Garage làm việc rất uy tín, không vẽ thêm bệnh để thu tiền. Một địa chỉ đáng tin cậy cho mọi chủ xe.",
+    },
+  ];
   return (
     <div
       id="loi-chung-thuc"
@@ -50,7 +90,7 @@ const FeedBackSection = ({ Data }: any) => {
                   <div>
                     <div className="flex items-center gap-3">
                       <div className=" rounded-full">
-                        <Image
+                        <img
                           src={
                             item.image
                               ? item.image
@@ -112,7 +152,7 @@ const FeedBackSection = ({ Data }: any) => {
                   <div>
                     <div className="flex items-center gap-3">
                       <div className=" rounded-full">
-                        <Image
+                        <img
                           src={
                             item.image
                               ? item.image
@@ -158,29 +198,13 @@ const FeedBackSection = ({ Data }: any) => {
           className="py-3 px-7 border-mainOrange border text-mainOrange hover:text-white hover:bg-mainOrange duration-300 uppercase font-bold"
           onClick={() =>
             HandleNavigate(
-              "https://search.google.com/local/reviews?placeid=ChIJT2lv4b1ncDERKM20c9ZYphU"
+              "https://search.google.com/local/reviews?placeid=ChIJT2lv4b1ncDERKM20c9ZYphU",
             )
           }
         >
           Xem Thêm
         </div>
       </div>
-      <>
-        <Drawer
-          footer={null}
-          title="Đánh giá của bạn"
-          placement="bottom"
-          open={isOpenModel}
-          height={700}
-          onClose={() => {
-            setIsOpenModel(false);
-            setFormData({});
-          }}
-          destroyOnClose={true}
-        >
-          <FeedBackForm setIsOpen={setIsOpenModel} />
-        </Drawer>
-      </>
     </div>
   );
 };

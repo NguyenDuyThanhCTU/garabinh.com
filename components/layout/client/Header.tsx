@@ -63,9 +63,7 @@ const Header = () => {
               </div>
               <div
                 className="flex items-center gap-2 hover:text-mainOrangeHover duration-300"
-                onClick={() =>
-                  window.open(`tel:${ContactData?.Hotline}`, "_blank")
-                }
+                onClick={() => window.open(`tel:0904215727`, "_blank")}
               >
                 <MdOutlineLocalPhone />
                 <div>Gọi Ngay</div>
@@ -74,7 +72,7 @@ const Header = () => {
                 className="flex items-center gap-2 hover:text-mainOrangeHover duration-300"
                 onClick={() =>
                   HandleNavigate(
-                    "https://www.google.com/maps/dir//Garage+B%C3%ADnh/data=!4m8!4m7!1m0!1m5!1m1!1s0x317067bde16f694f:0x15a658d673b4cd28!2m2!1d109.19163979999999!2d12.2134214"
+                    "https://www.google.com/maps/dir//Garage+B%C3%ADnh/data=!4m8!4m7!1m0!1m5!1m1!1s0x317067bde16f694f:0x15a658d673b4cd28!2m2!1d109.19163979999999!2d12.2134214",
                   )
                 }
               >

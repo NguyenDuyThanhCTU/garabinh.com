@@ -12,7 +12,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import Link from "next/link";
 import { SwiperNavButtons } from "@components/items/client/SwiperNavButtons";
 
-const TopSection = ({ Data }: any) => {
+const TopSection = () => {
   const [isOpen, setIsOpen] = useState(false);
   const { setFormData, HandleNavigate } = useStateProvider();
 
@@ -45,42 +45,15 @@ const TopSection = ({ Data }: any) => {
         </div>
       </div>
 
-      <Swiper
-        modules={[Navigation, Pagination, A11y, Autoplay]}
-        spaceBetween={30}
-        loop={true}
-        centeredSlides={true}
-        slidesPerView={1}
-        slidesPerGroup={1}
-        pagination={{
-          clickable: true,
-          dynamicBullets: true,
-        }}
-        autoplay={{
-          delay: 2500,
-          disableOnInteraction: false,
-        }}
-        navigation={true}
-        className="mySwiper relative"
-      >
-        {Data?.map((item: any, index: number) => (
-          <SwiperSlide key={index} className=" h-full">
-            <div
-              className="w-full h-[620px] mt-16 cursor-pointer"
-              onClick={() => Navigate(item.url, item.type)}
-            >
-              <Image
-                src={item.image}
-                alt="Picture of the author"
-                width={1000}
-                height={1000}
-                className="w-full h-full object-cover object-center"
-              />
-            </div>
-          </SwiperSlide>
-        ))}
-        <SwiperNavButtons />
-      </Swiper>
+      <div className="w-full h-[620px] mt-16 cursor-pointer">
+        <Image
+          src="https://firebasestorage.googleapis.com/v0/b/khogachtinp.appspot.com/o/B%C3%ADnh.jpg?alt=media&token=4222758c-f0ef-4e85-8d03-04ea893fa194"
+          alt="Picture of the author"
+          width={1000}
+          height={1000}
+          className="w-full h-full object-cover object-center"
+        />
+      </div>
 
       <>
         <Modal

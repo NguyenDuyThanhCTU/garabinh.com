@@ -3,7 +3,7 @@ import React from "react";
 import ImageUploader from "./ImageUploader";
 import { FaRegCircleQuestion } from "react-icons/fa6";
 import { Tooltip } from "antd";
-import TextEditor from "./TextEditor/TextEditor";
+// import TextEditor from "./TextEditor/TextEditor";
 import { useStateProvider } from "@context/StateProvider";
 
 interface InputFormProps {
@@ -78,14 +78,14 @@ const InputForm = ({
                 )}
               </div>
               <div className="px-4 py-1   bg-white rounded-lg w-full col-span-6">
-                <TextEditor
+                {/* <TextEditor
                   initialValue={
                     FormData ? FormData[field] : "<p>Content...</p>"
                   }
                   onChange={setFormData}
                   Form={FormData}
                   Field={field}
-                />
+                /> */}
               </div>
             </div>
           </>
@@ -227,7 +227,7 @@ const InputForm = ({
                               ...FormData,
                               [field]: currentFormData.filter(
                                 (existingItem: any) =>
-                                  existingItem !== e.target.value
+                                  existingItem !== e.target.value,
                               ),
                             });
                           }
